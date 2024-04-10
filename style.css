@@ -17,8 +17,8 @@ main .navigation {
   flex-direction: column;
   color: white;
   background-color: black;
-  gap: 50px;
-  padding: 20px;
+  padding: 30px 0;
+  gap: 30px;
 }
 main .navigation nav {
   display: flex;
@@ -34,21 +34,30 @@ main .navigation nav ul {
 }
 main .navigation nav ul li {
   text-align: center;
-  padding: 10px;
   list-style: none;
   width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.3s;
 }
-main .navigation nav ul :first-child:hover {
+main .navigation nav ul li a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+}
+main .navigation nav ul :first-child a:hover {
   background-color: #607d8b;
 }
-main .navigation nav ul :nth-child(2):hover {
+main .navigation nav ul :nth-child(2) a:hover {
   background-color: #278680;
 }
-main .navigation nav ul :nth-child(3):hover {
+main .navigation nav ul :nth-child(3) a:hover {
   background-color: #6b675b;
 }
-main .navigation nav ul :last-child:hover {
+main .navigation nav ul :last-child a:hover {
   background-color: #894f45;
 }
 main .about_me {
@@ -77,9 +86,13 @@ main .my_works {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 0;
-  gap: 30px;
+  gap: 20px;
+  padding: 50px 0px;
+  text-align: center;
   background-color: #f1f1f1;
+}
+main .my_works h2 {
+  margin-top: 10px;
 }
 main .my_works article {
   display: flex;
@@ -95,34 +108,30 @@ main .my_works article div img {
 main .resume {
   background-color: #3f51b5;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
 }
-main .resume table {
-  border: 1px solid red;
-  width: 90%;
+main .resume .table {
+  width: 100%;
+  display: table;
 }
-main .resume table tr {
-  padding: 10px;
-  border: 1px solid red;
-}
-main .resume table tr th,
-main .resume table tr td {
-  border: 1px solid red;
+main .resume .table tr {
   padding: 5px;
 }
+main .resume .table tr tr,
+main .resume .table tr td {
+  padding: 5px;
+}
+main .resume .table .white {
+  background-color: white ;
+  color: black ;
+  padding: 20px;
+}
 main .swing_by {
-  display: grid;
-  justify-content: space-around;
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  color: white;
+  color: #f1f1f1;
   flex-direction: column;
   background-color: #616161;
-  padding: 20px;
 }
 main .swing_by article {
   text-align: center;
@@ -157,15 +166,14 @@ main .form_section article form {
 }
 main .form_section article form :last-child {
   align-self: flex-end;
-  width: 15%;
+  width: 20%;
   border: 0;
   padding: 5px 10px;
   background-color: #009688;
   border-radius: 10px;
-  position: static;
-  font-size: 100%;
   color: white;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 main .form_section article form :last-child:hover {
   background-color: #00796d;
@@ -187,28 +195,44 @@ main footer {
   padding: 20px 10px;
   display: flex;
   font-size: 90%;
+  grid-column: span 2 ;
 }
-main footer a {
-  color: white;
+.common {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
 }
-main footer a:hover {
-  color: #78c900;
-  transition: 0.3s;
-}
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
+  p,
+  tr {
+    font-size: 80%;
+  }
   main {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "section" "section" "section" "footer ";
   }
   main .swing_by {
-    gap: 60px;
+    gap: 100px;
     padding: 20px;
-    height: 80vh;
   }
   main form :last-child {
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: center;
+  }
+  main .my_works > article {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  main .my_works > article > div :nth-child(1),
+  main .my_works > article :nth-child(3) {
+    display: none;
+  }
+  main footer {
+    grid-column: span 1;
   }
 }

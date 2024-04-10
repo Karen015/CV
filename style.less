@@ -22,9 +22,8 @@ main {
         flex-direction: column;
         color: white;
         background-color: black;
-        gap: 50px;
-        padding: 20px;
-
+        padding: 30px 0;
+        gap: 30px;
         nav {
             display: flex;
             width: 90%;
@@ -39,21 +38,31 @@ main {
                 
                 li {
                     text-align: center;
-                    padding: 10px;
+                    
                     list-style: none;
                     width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     transition: 0.3s;
+                    a { 
+                        padding: 10px;
+                        text-decoration: none;                    
+                        color: white;
+                        width: 100%;
+                    }
                 }
-                :first-child:hover{
+                :first-child a:hover{
                     background-color: #607d8b;
                 }
-                :nth-child(2):hover {
+                :nth-child(2) a:hover {
                     background-color: #278680;
                 }
-                :nth-child(3):hover {
+                :nth-child(3) a:hover {
                     background-color: #6b675b;
                 }
-                :last-child:hover {
+                :last-child a:hover {
                     background-color: #894f45;
                 }
             }
@@ -88,12 +97,18 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        padding: 30px 0;
-        gap: 30px;
+        align-items: center;        
+        gap: 20px;
+        text-align: center;
+        padding: 50px 0px;
+        text-align: center;
         background-color: #f1f1f1;
+        h2{
+            margin-top: 10px;
+        }
         article {
             display: flex;
+            
             
             div {
 
@@ -107,44 +122,35 @@ main {
             }
         }
     }
-    .resume {
+    .resume{
         background-color: #3f51b5;
         color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 30px;
-        table {
-            border: 1px solid red;
-            width: 90%;
-            // :nth-child(41) {
-            //     background-color: white;
-            // }
-            tr {
-                padding: 10px;
-                border: 1px solid red;
+            .table{     
+                width: 100%;
+                display: table;  
 
-                th, td {
-                    border: 1px solid red;
+                tr {
                     padding: 5px;
-
-                }
-
+                    tr, td {
+                        padding: 5px;
+                    }
+                    
+                } 
+            .white{
+                background-color: white ;
+                color: black ;
+                padding: 20px;
             }
-
         }
     }
-
     .swing_by {
-        display: grid;
-        justify-content: space-around;
-        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
         align-items: center;
-        color: white;
+        color: #f1f1f1;
         flex-direction: column;
         background-color: #616161;
-        padding: 20px;
+
         article {
             text-align: center;
         }
@@ -180,15 +186,14 @@ main {
 
                 :last-child {
                     align-self: flex-end;
-                    width: 15%;
+                    width: 20%;
                     border: 0;
                     padding: 5px 10px;
                     background-color: #009688;
                     border-radius: 10px;
-                    position: static;
-                    font-size: 100%;
                     color: white;
-                    text-align: center;
+                    display: flex;
+                    justify-content: center;
                     &:hover {
                         background-color: #00796d;
                         transition: 0.5s;
@@ -216,30 +221,40 @@ main {
         padding: 20px 10px;
         display: flex;
         font-size: 90%;
-        a {
-            color: white;
-
-            &:hover {
-                color: rgb(120, 201, 0);
-                transition: 0.3s;
-            }
-        }
+        
+        
+        grid-column: span 2 ;
+        // es grid-column-i patcharov median sxala ashxatum
     }
 }
+.common{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+}
 
-@media (max-width: 600px) {
+
+
+@media only screen and (max-width: 600px){
+    p, tr {
+        font-size: 80%;
+    }
     main {
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas: 
-        "section"
-        "section"
-        "section"
-        "footer ";   
+            "section"
+            "section"
+            "section"
+            "footer ";
+
         .swing_by {
-            gap: 60px;
+            gap: 100px;
             padding: 20px;
-            height: 80vh;
         }
+
         form {
             :last-child  {
                 display: flex;
@@ -247,8 +262,17 @@ main {
                 justify-content: center;
                 align-self: center;
             }
-            
+        }
+        .my_works > article {
+            display: flex;
+            flex-direction: column-reverse;
+
+            > div :nth-child(1), :nth-child(3){
+                display: none;
+            }
+        }
+        footer {
+            grid-column: span 1;
         }
     }
-    
 }

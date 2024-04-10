@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>CV</title>
 </head>
 <body>
     <main>
         <section class="navigation">
             <h2>My Logo</h2>
-
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>My Work</li>
-                    <li>Resume</li>
-                    <li>Contact</li>
+                    <li><a href="#aboutMe">Home</a></li>
+                    <li><a href="#work">My Work</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
         </section>
 
-        <section class="about_me">
+        <section class="about_me" id="aboutMe">
             <h2>About Me</h2>
             <img src="https://www.w3schools.com/w3images/avatar3.png" alt="">
             <article>
@@ -32,7 +31,7 @@
         </section>
 
 
-        <section class="my_works">
+        <section class="my_works" id="work">
             <h2>My Works</h2>
             <p>Some of my latest projects.</p>
             <article>
@@ -47,56 +46,47 @@
                     <img src="https://www.w3schools.com/w3images/workbench.jpg" alt="">
                 </div>
             </article>
-            <p>Just call me awesome)</p>
+            <p>Just call me awesome</p>
         </section>
 
-        <section class="resume">
+        <section class="resume common" id="resume">
             <h2>Resume</h2>
             <p>A draft from my CV</p>
-            
-            <table>
-                <tr>
-                    <th>Year</th>
-                    <th>Title</th>
-                    <th>Where</th>
-                </tr>
-                <tr>
-                    <td>2012-<br>
-                        2016</td>
-                    <td>The rest is history..</td>
-                    <td>Lorem ipsum</td>
-                </tr>
-                <tr>
-                    <td>2009-<br>
-                        2012</td>
-                    <td>Started my own company</td>
-                    <td>My Garage</td>
-                </tr>
-                <tr>
-                    <td>2008-<br>
-                        2009</td>
-                    <td>Started working for Lorem</td>
-                    <td>London, UK</td>
-                </tr>
-                <tr>
-                    <td>2005-<br>
-                        2008</td>
-                    <td>Degree in Bachelor of Design</td>
-                    <td>Harvard, USA</td>
-                </tr>
-                <tr>
-                    <td>2002-<br>
-                        2005</td>
-                    <td>Degree in Bachelor of Business</td>
-                    <td>RMIT University, Melbourne, Australia</td>
-                </tr>
-                <tr>
-                    <td>2002-<br>
-                        2005</td>
-                    <td>Degree in Bachelor of Business</td>
-                    <td>RMIT University, Melbourne, Australia</td>
-                </tr>
-            </table>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Year</th>
+                        <th>Title</th>
+                        <th>Where</th>
+                    </tr>
+                    <tr class="white">
+                        <td>2012-<br>2016</td>
+                        <td>The rest is <br> history...</td>
+                        <td>Lorem ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>2009-<br>2012</td>
+                        <td>Started my<br> own <br>company</td>
+                        <td>My Garage</td>
+                    </tr>
+                    <tr class="white">
+                        <td>2008-<br>2009</td>
+                        <td>Started<br> working for <br> Lorem</td>
+                        <td>London, UK</td>
+                    </tr>
+                    <tr>
+                        <td>2005-<br>2008</td>
+                        <td>Degree in <br>Bachelor of<br> Design</td>
+                        <td>Harvard, USA</td>
+                    </tr>
+                    <tr class="white">
+                        <td>2002-<br>2005</td>
+                        <td>Degree in <br> Bachelor of<br> Design</td>
+                        <td>Australia</td>
+                    </tr>
+    
+                </tbody>
+            </table>        
         </section>
 
         <section class="swing_by">
@@ -110,7 +100,7 @@
             
         </section>
 
-        <section class="form_section">
+        <section class="form_section" id="contact">
             <article>
                 <h2>Contact</h2>
                 <p style="color: rgba(255, 255, 255, 0.497);">GET IN TOUCH</p>
@@ -129,7 +119,7 @@
         </section>
 
         <footer class="">
-            <p>Powered By <a href="#">Karen Aghajanyan</a>)</p>
+            <p>Powered By></p>
         </footer>
     </main>
 
