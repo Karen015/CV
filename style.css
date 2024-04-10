@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+main {
+  margin: auto;
+  max-width: 1050px;
+  display: grid;
+  grid-template-columns: repeat(2, 1.1fr);
+  grid-template-areas: "section section" "section section" "section section" "footer  footer";
+}
+main .navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: black;
+  gap: 50px;
+  padding: 20px;
+}
+main .navigation nav {
+  display: flex;
+  width: 90%;
+}
+main .navigation nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main .navigation nav ul li {
+  text-align: center;
+  padding: 10px;
+  list-style: none;
+  width: 100%;
+  transition: 0.3s;
+}
+main .navigation nav ul :first-child:hover {
+  background-color: #607d8b;
+}
+main .navigation nav ul :nth-child(2):hover {
+  background-color: #278680;
+}
+main .navigation nav ul :nth-child(3):hover {
+  background-color: #6b675b;
+}
+main .navigation nav ul :last-child:hover {
+  background-color: #894f45;
+}
+main .about_me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: #607d8b;
+  padding: 30px;
+  gap: 20px;
+}
+main .about_me img {
+  width: 50%;
+  height: auto;
+  border-radius: 50%;
+}
+main .about_me article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+main .my_works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  gap: 30px;
+  background-color: #f1f1f1;
+}
+main .my_works article {
+  display: flex;
+}
+main .my_works article div {
+  display: flex;
+  flex-direction: column;
+}
+main .my_works article div img {
+  width: 100%;
+  height: auto;
+}
+main .resume {
+  background-color: #3f51b5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+main .resume table {
+  border: 1px solid red;
+  width: 90%;
+}
+main .resume table tr {
+  padding: 10px;
+  border: 1px solid red;
+}
+main .resume table tr th,
+main .resume table tr td {
+  border: 1px solid red;
+  padding: 5px;
+}
+main .swing_by {
+  display: grid;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  background-color: #616161;
+  padding: 20px;
+}
+main .swing_by article {
+  text-align: center;
+}
+main .form_section {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  background-color: #009688;
+  padding: 50px 20px;
+  color: white;
+}
+main .form_section article {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  padding: 50px 10px;
+  gap: 10px;
+}
+main .form_section article form {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  box-shadow: 2px 4px 10px #3d3d3d;
+  padding: 50px 20px;
+  height: 70%;
+  gap: 10px;
+}
+main .form_section article form :last-child {
+  align-self: flex-end;
+  width: 15%;
+  border: 0;
+  padding: 5px 10px;
+  background-color: #009688;
+  border-radius: 10px;
+  position: static;
+  font-size: 100%;
+  color: white;
+  text-align: center;
+}
+main .form_section article form :last-child:hover {
+  background-color: #00796d;
+  transition: 0.5s;
+  box-shadow: 5px 5px 6px #848484;
+}
+main .form_section article form input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #dadada;
+  padding: 5px 0;
+}
+main .form_section article form label {
+  align-self: start;
+}
+main footer {
+  background-color: black;
+  color: white;
+  padding: 20px 10px;
+  display: flex;
+  font-size: 90%;
+}
+main footer a {
+  color: white;
+}
+main footer a:hover {
+  color: #78c900;
+  transition: 0.3s;
+}
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "section" "section" "section" "footer ";
+  }
+  main .swing_by {
+    gap: 60px;
+    padding: 20px;
+    height: 80vh;
+  }
+  main form :last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+}

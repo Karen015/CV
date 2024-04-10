@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+main {
+    margin: auto;
+    max-width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(2, 1.1fr);
+    grid-template-areas: 
+        "section section"
+        "section section"
+        "section section"
+        "footer  footer";
+
+    .navigation {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        background-color: black;
+        gap: 50px;
+        padding: 20px;
+
+        nav {
+            display: flex;
+            width: 90%;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                
+                li {
+                    text-align: center;
+                    padding: 10px;
+                    list-style: none;
+                    width: 100%;
+                    transition: 0.3s;
+                }
+                :first-child:hover{
+                    background-color: #607d8b;
+                }
+                :nth-child(2):hover {
+                    background-color: #278680;
+                }
+                :nth-child(3):hover {
+                    background-color: #6b675b;
+                }
+                :last-child:hover {
+                    background-color: #894f45;
+                }
+            }
+        }
+    }
+
+    .about_me {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        background-color: #607d8b;
+        padding: 30px;
+        gap: 20px;
+
+        img {
+            width: 50%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px;
+        }
+    }
+
+    .my_works {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+        gap: 30px;
+        background-color: #f1f1f1;
+        article {
+            display: flex;
+            
+            div {
+
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .resume {
+        background-color: #3f51b5;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        table {
+            border: 1px solid red;
+            width: 90%;
+            // :nth-child(41) {
+            //     background-color: white;
+            // }
+            tr {
+                padding: 10px;
+                border: 1px solid red;
+
+                th, td {
+                    border: 1px solid red;
+                    padding: 5px;
+
+                }
+
+            }
+
+        }
+    }
+
+    .swing_by {
+        display: grid;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        color: white;
+        flex-direction: column;
+        background-color: #616161;
+        padding: 20px;
+        article {
+            text-align: center;
+        }
+    }
+
+    .form_section {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        background-color: #009688;
+        padding: 50px 20px;
+        color: white;
+
+        article {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 90%;
+            padding: 50px 10px;
+            gap: 10px;
+
+            form {
+                display: flex;
+                background-color: white;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: black;
+                box-shadow: 2px 4px 10px rgb(61, 61, 61);
+                padding: 50px 20px;
+                height: 70%;
+                gap: 10px;
+
+                :last-child {
+                    align-self: flex-end;
+                    width: 15%;
+                    border: 0;
+                    padding: 5px 10px;
+                    background-color: #009688;
+                    border-radius: 10px;
+                    position: static;
+                    font-size: 100%;
+                    color: white;
+                    text-align: center;
+                    &:hover {
+                        background-color: #00796d;
+                        transition: 0.5s;
+                        box-shadow: 5px 5px 6px #848484;
+                    }
+                }
+                
+                input {
+                    width: 100%;
+                    border: 0;
+                    border-bottom: 1px solid rgb(218, 218, 218);
+                    padding: 5px 0;
+                }
+
+                label {
+                    align-self: start;
+                }
+            }
+        }  
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        padding: 20px 10px;
+        display: flex;
+        font-size: 90%;
+        a {
+            color: white;
+
+            &:hover {
+                color: rgb(120, 201, 0);
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "section"
+        "section"
+        "section"
+        "footer ";   
+        .swing_by {
+            gap: 60px;
+            padding: 20px;
+            height: 80vh;
+        }
+        form {
+            :last-child  {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+            }
+            
+        }
+    }
+    
+}
